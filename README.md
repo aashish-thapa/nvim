@@ -1,34 +1,105 @@
-# AstroNvim Template
+# AstroNvim Template (CUSTOMIZED)
+**Note:** Based on *AstroNvim v5+*, this repository provides a ready-to-use template for personal Neovim setup, leveraging Lua and modern plugin configuration workflows.([GitHub][1])
 
-**NOTE:** This is for AstroNvim v5+
+---
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## 1. Overview
 
-## 🛠️ Installation
+This repository serves as a personalized configuration for Neovim, built atop AstroNvim. It includes:
 
-#### Make a backup of your current nvim and shared folder
+* `init.lua` — main configuration entry.
+* `lua/` directory — modular plugin and configuration files.
+* `lazy-lock.json` — plugin lockfile (for lazy.nvim).
+* Configuration standards via `.neoconf.json`, `.stylua.toml`, and `selene.toml`.
 
-```shell
+Perfect for users seeking a clean, modular, performant Neovim experience.
+
+---
+
+## 2. Prerequisites
+
+Before diving in, ensure your environment satisfies the following:
+
+* **Neovim v0.9+**, ideally v0.10+, to enable full compatibility with AstroNvim features like Lua configuration and built-in LSP.
+* **Git** for cloning and version control.
+
+You may also consider installing:
+
+* **Node.js**, **npm**, **Python (pip)**, **Rust**, or **Go**, depending on plugins your configuration uses (e.g., LSP servers, formatters, fuzzy-finders).
+
+---
+
+## 3. Installation
+
+### 3.1 Backup Existing Configuration
+
+```bash
 mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/share/nvim ~/.local/shared/nvim.bak
 mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
 
-#### Create a new user repository from this template
+### 3.2 Clone Your Config
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
-
-#### Clone the repository
-
-```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+```bash
+git clone https://github.com/aashish-thapa/nvim.git ~/.config/nvim
 ```
 
-#### Start Neovim
+### 3.3 Launch Neovim
 
-```shell
+```bash
 nvim
 ```
+
+On first launch, AstroNvim’s package manager (`lazy.nvim`) will install and configure plugins based on your Lua modules and lockfile.([GitHub][1])
+
+---
+
+## 4. Structure & Files
+
+| File / Folder                 | Purpose                                                    |
+| ----------------------------- | ---------------------------------------------------------- |
+| `init.lua`                    | Core configuration loader                                  |
+| `lua/`                        | Modular config (plugins, options, keybindings, etc.)       |
+| `lazy-lock.json`              | Locked plugin versions for reproducible setups             |
+| `.neoconf.json`               | AstroNvim config defaults and override declarations        |
+| `.stylua.toml`, `selene.toml` | Style and linting configurations ensuring code consistency |
+
+---
+
+## 5. Customization & Management
+
+* **Modify or Add Configs:** Edit or add files in the `lua/` folder to customize plugin behavior, keybindings, themes, LSP setup, etc.
+* **Sync Plugins:** For plugin updates or lockfile changes:
+
+  ```vim
+  :Lazy sync
+  ```
+* **Restore Previous Setup:** Undo changes by restoring backups you made in Step 3.1.
+
+---
+
+## 6. Troubleshooting
+
+* **Missing Plugins or Errors?** Run `:Lazy sync` to ensure dependencies are installed.
+* **Configuration Issues?** Temporarily replace `~/.config/nvim` with a minimal setup to debug.
+* **Check Health:** Run `:checkhealth` to get diagnostics for LSPs, treesitter, and more.
+
+---
+
+## 7. Summary Table
+
+| Step                   | Description                                  |
+| ---------------------- | -------------------------------------------- |
+| Backup Existing Config | Preserve previous setup before changes       |
+| Clone This Repo        | Deploy your custom Neovim template           |
+| Launch Neovim          | Auto-installs and initializes setup          |
+| Customize via `lua/`   | Tweak plugins, themes, and keybindings       |
+| Sync Plugins           | Keep lockfile and plugin states updated      |
+| Use `:checkhealth`     | Diagnose configuration or environment issues |
+
+---
+
+
+[1]: https://github.com/aashish-thapa/nvim "GitHub - aashish-thapa/nvim"

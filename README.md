@@ -1,7 +1,7 @@
-Based on *AstroNvim v5+*, this repository provides a ready-to-use template for personal Neovim setup, leveraging Lua and modern plugin configuration workflows.([GitHub][1])
----
-
 ## 1. Overview
+Based on Astrovim [link to github](https://github.com/AstroNvim/AstroNvim)
+
+### Image Preview
 <img width="1912" height="1164" alt="image" src="https://github.com/user-attachments/assets/461a1cc0-beda-4ee9-b0f3-a1aa810154b3" />
 
 
@@ -11,8 +11,6 @@ This repository serves as a personalized configuration for Neovim, built atop As
 * `lua/` directory — modular plugin and configuration files.
 * `lazy-lock.json` — plugin lockfile (for lazy.nvim).
 * Configuration standards via `.neoconf.json`, `.stylua.toml`, and `selene.toml`.
-
-Perfect for users seeking a clean, modular, performant Neovim experience.
 
 ---
 
@@ -85,19 +83,6 @@ On first launch, AstroNvim’s package manager (`lazy.nvim`) will install and co
 * **Missing Plugins or Errors?** Run `:Lazy sync` to ensure dependencies are installed.
 * **Configuration Issues?** Temporarily replace `~/.config/nvim` with a minimal setup to debug.
 * **Check Health:** Run `:checkhealth` to get diagnostics for LSPs, treesitter, and more.
-
----
-
-## 7. Summary Table
-
-| Step                   | Description                                  |
-| ---------------------- | -------------------------------------------- |
-| Backup Existing Config | Preserve previous setup before changes       |
-| Clone This Repo        | Deploy your custom Neovim template           |
-| Launch Neovim          | Auto-installs and initializes setup          |
-| Customize via `lua/`   | Tweak plugins, themes, and keybindings       |
-| Sync Plugins           | Keep lockfile and plugin states updated      |
-| Use `:checkhealth`     | Diagnose configuration or environment issues |
 
 ---
 

@@ -1,9 +1,9 @@
-# AstroNvim Template (CUSTOMIZED)
-**Note:** Based on *AstroNvim v5+*, this repository provides a ready-to-use template for personal Neovim setup, leveraging Lua and modern plugin configuration workflows.([GitHub][1])
-
+Based on *AstroNvim v5+*, this repository provides a ready-to-use template for personal Neovim setup, leveraging Lua and modern plugin configuration workflows.([GitHub][1])
 ---
 
 ## 1. Overview
+<img width="1912" height="1164" alt="image" src="https://github.com/user-attachments/assets/461a1cc0-beda-4ee9-b0f3-a1aa810154b3" />
+
 
 This repository serves as a personalized configuration for Neovim, built atop AstroNvim. It includes:
 

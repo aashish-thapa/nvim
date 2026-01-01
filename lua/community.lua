@@ -67,4 +67,7 @@ return {
   { import = "astrocommunity.scrolling.mini-animate" },
   -- { import = "astrocommunity.scrolling.cinnamon-nvim" },
   -- { import = "astrocommunity.media.vim-wakatime" },
+
+  -- AI Completion
+  { import = "astrocommunity.completion.supermaven-nvim" },
 }
